@@ -106,8 +106,9 @@ ON Books(BookID);
 CREATE INDEX Index_MemberID
 ON Members(MemberID);
 
--- BooksID and MemberID are PK
--- We chooseed BooksID
+-- Because BookID and MemberID are primary keys and are frequently used in lookups, joins, and conditions
+-- making indexing essential for fast access and query optimization.
+
 
 
 --Create a scalar function that takes a MemberID and returns the number of books currently
